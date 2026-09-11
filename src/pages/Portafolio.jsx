@@ -6,7 +6,7 @@ import { ArrowRight, Layers, Sparkles } from "lucide-react";
 
 const ProjectEntity = base44.entities.Project;
 
-const AnimatedElement = ({ children, className, delay = 0 }) => {
+const AnimatedElement = ({ children, className = "", delay = 0 }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
