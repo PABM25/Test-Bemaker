@@ -192,7 +192,7 @@ function StatsSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <AnimatedElement>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-            {stats.map((s, index) => (
+            {stats.map((s) => (
               <div key={s.label}>
                 <p className="text-3xl sm:text-4xl font-bold text-accent mb-2">
                   {s.value}
