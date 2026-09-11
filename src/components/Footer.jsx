@@ -15,18 +15,17 @@ export default function Footer() {
         <div className="sm:col-span-2">
           <Link to="/" className="inline-flex items-center min-h-[44px] mb-4">
             <img
-              src="https://media.base44.com/images/public/6aa31f5575f766e47f89b72f/c6185d7fe_bemaker_cl_LOGO_BEMAKER-16_copy_548fdea4.png"
+              src="/brand/LOGO%20BEMAKER-14%20copy.PNG"
               alt="BeMaker"
               loading="lazy"
-              onError={(e) => {
-                e.target.style.display = "none";
-                e.target.nextElementSibling.style.display = "inline";
-              }}
-              className="h-8 w-auto object-contain"
+              className="brand-logo brand-logo-light h-8 w-auto object-contain"
             />
-            <span className="font-bold text-xl text-secondary-foreground" style={{ display: "none" }}>
-              BeMaker
-            </span>
+            <img
+              src="/brand/LOGO%20BEMAKER-16%20copy.png"
+              alt="BeMaker"
+              loading="lazy"
+              className="brand-logo brand-logo-dark h-8 w-auto object-contain"
+            />
           </Link>
           <p className="text-secondary-foreground/60 text-sm max-w-sm leading-relaxed">
             Desarrollo de landing pages y automatización para PYMEs. Tecnología

@@ -202,3 +202,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading) !important; }
 html {
   scroll-behavior: smooth;
 }
+
+.brand-logo-dark {
+  display: none;
+}
+
+.dark .brand-logo-light {
+  display: none;
+}
+
+.dark .brand-logo-dark {
+  display: block;
+}

@@ -34,21 +34,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[68px]">
         <Link to="/" className="flex items-center min-h-[44px] group">
           <img
-            src="https://media.base44.com/images/public/6aa31f5575f766e47f89b72f/c6185d7fe_bemaker_cl_LOGO_BEMAKER-16_copy_548fdea4.png"
+            src="/brand/LOGO%20BEMAKER-14%20copy.PNG"
             alt="BeMaker"
-            onError={(e) => {
-              e.target.style.display = "none";
-              e.target.nextElementSibling.style.display = "inline";
-            }}
-            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            data-logo-fill="light"
+            className="brand-logo brand-logo-light h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
-          <span
-            className="font-bold text-xl text-secondary-foreground"
-            style={{ display: "none" }}
-          >
-            BeMaker
-          </span>
+          <img
+            src="/brand/LOGO%20BEMAKER-16%20copy.png"
+            alt="BeMaker"
+            className="brand-logo brand-logo-dark h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         <nav className="hidden sm:flex items-center gap-8 text-sm font-medium">
