@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle2, Clock } from "lucide-react";
 
-const AnimatedElement = ({ children, className, delay = 0 }) => {
+const AnimatedElement = ({ children, className = "", delay = 0 }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
