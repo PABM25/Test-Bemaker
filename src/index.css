@@ -18,13 +18,12 @@
 
     --accent-foreground: 0 0% 100%;
 
-    --background: 0 0% 100%;
-
+    --background: 225 18% 96%;
     --foreground: 240 60% 10%;
 
-    --secondary: 32 50% 90%;
+    --secondary: 225 18% 92%;
 
-    --secondary-foreground: 240 100% 20%;
+    --secondary-foreground: 240 60% 10%;
 
     --card: 0 0% 100%;
 
@@ -40,7 +39,7 @@
 
     --input: 32 25% 88%;
 
-    --muted: 32 30% 93%;
+    --muted: 225 16% 91%;
 
     --muted-foreground: 240 20% 40%;
 
@@ -52,7 +51,7 @@
 
     --ring: 207 72% 38%;
 
-    --border: 32 20% 85%;
+    --border: 225 12% 84%;
 
   }
 
