@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { base44 } from "@/api/base44Client";
 import { ArrowRight, Eye, Compass, HeartHandshake, Sparkles, MessageSquare } from "lucide-react";
-
-const ProcessStepEntity = base44.entities.ProcessStep;
-const TestimonialEntity = base44.entities.Testimonial;
-const PartnerEntity = base44.entities.Partner;
 
 /* --- Custom Styles for Native Animations (WPO) --- */
 const injectStyles = () => {
@@ -113,17 +108,13 @@ function HeroSection() {
 
 /* ---------------- Process / Flujo de trabajo ---------------- */
 function ProcessSection() {
-  const [steps, setSteps] = useState([]);
-  useEffect(() => {
-    ProcessStepEntity.list().then(setSteps).catch(() => {});
-  }, []);
   const staticFallback = [
     { number: "01", title: "Idea & Estrategia", description: "Comprendemos tu negocio, tus metas y definimos el camino tecnológico más rentable para tu PYME." },
     { number: "02", title: "Diseño UX/UI", description: "Creamos interfaces accesibles, intuitivas y elegantes que cautivan a todo tipo de usuarios." },
     { number: "03", title: "Desarrollo", description: "Escribimos código limpio, robusto y escalable para que tu plataforma funcione sin fallos." },
     { number: "04", title: "Lanzamiento", description: "Desplegamos tu solución digital y te acompañamos para asegurar tu crecimiento continuo." },
   ];
-  const items = steps.length > 0 ? steps : staticFallback;
+  const items = staticFallback;
 
   return (
     <section className="relative bg-secondary py-20 sm:py-32 border-t border-border/5">

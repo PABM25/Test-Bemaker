@@ -1,10 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { base44 } from "@/api/base44Client";
 import { ArrowRight, Layers, Sparkles } from "lucide-react";
-
-const ProjectEntity = base44.entities.Project;
 
 const AnimatedElement = ({ children, className = "", delay = 0 }) => {
   const ref = useRef(null);
@@ -84,16 +81,7 @@ function PortfolioHero() {
 }
 
 function ProjectsGrid() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("Todos");
-
-  useEffect(() => {
-    ProjectEntity.list()
-      .then(setProjects)
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, []);
 
   const staticFallback = [
     {
@@ -130,7 +118,7 @@ function ProjectsGrid() {
     },
   ];
 
-  const items = projects.length > 0 ? projects : staticFallback;
+  const items = staticFallback;
   const categories = ["Todos", ...new Set(items.map((i) => i.category))];
   const filtered =
     activeFilter === "Todos"
@@ -139,9 +127,7 @@ function ProjectsGrid() {
 
   return (
     <section
-      className={`relative bg-background py-20 sm:py-24 ${
-        loading ? "opacity-95" : "opacity-100"
-      }`}
+      className="relative bg-background py-20 sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedElement className="flex flex-wrap items-center justify-center gap-3 mb-14">
