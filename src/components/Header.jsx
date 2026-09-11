@@ -6,12 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window === "undefined") return false;
-    const stored = localStorage.getItem("bemaker-theme");
-    if (stored) return stored === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+  const [isDark, setIsDark] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

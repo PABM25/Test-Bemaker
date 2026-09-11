@@ -216,16 +216,12 @@ function AboutSection() {
 
 /* ---------------- Testimonials ---------------- */
 function TestimonialsSection() {
-  const [testimonials, setTestimonials] = useState([]);
-  useEffect(() => {
-    TestimonialEntity.list().then(setTestimonials).catch(() => {});
-  }, []);
   const staticFallback = [
     { quote: "Gracias a BeMaker, pudimos digitalizar nuestro sistema de trazabilidad en tiempo récord. El diseño es increíblemente intuitivo.", author: "Lavandería DeLaCruz" },
     { quote: "Lograron entender lo que necesitábamos para gestionar nuestros inventarios y trabajos de manera eficiente. Su equipo es profesional y muy atento.", author: "Construcciones V&G" },
     { quote: "Soporte rápido y código impecable. Totalmente recomendados para cualquier PYME que quiera profesionalizarse.", author: "Construcciones V&G" },
   ];
-  const items = testimonials.length > 0 ? testimonials : staticFallback;
+  const items = staticFallback;
 
   return (
     <section className="relative bg-background pb-24 sm:pb-32">
@@ -259,15 +255,11 @@ function TestimonialsSection() {
 
 /* ---------------- Partners / Marquee ---------------- */
 function PartnersSection() {
-  const [partners, setPartners] = useState([]);
-  useEffect(() => {
-    PartnerEntity.list().then(setPartners).catch(() => {});
-  }, []);
   const staticFallback = [
     { name: "Construcciones V&G", image_url: "https://media.base44.com/images/public/6aa31f5575f766e47f89b72f/ff0da3d74_bemaker_cl_Contru_436f585d.png" },
     { name: "DeLaCruz Lavandería", image_url: "https://media.base44.com/images/public/6aa31f5575f766e47f89b72f/84c97e7a6_bemaker_cl_delacruz_edb07b4f.png" },
   ];
-  const items = partners.length > 0 ? partners : staticFallback;
+  const items = staticFallback;
   
   // Duplicate enough times to ensure seamless scrolling
   const marqueeItems = [...items, ...items, ...items, ...items, ...items, ...items];
